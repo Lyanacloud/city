@@ -3,7 +3,7 @@ import {useState} from "react";
 type ModalProps = {
     type: "monument" | "factory" | "rest"
     title: string,
-    src: string,
+    src?: string,
     shortDescription?: string
     fullDescription?: string
 }
