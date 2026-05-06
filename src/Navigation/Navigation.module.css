@@ -1,0 +1,48 @@
+.div {
+    height: 10svh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background: aliceblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3svh;
+    box-shadow: 0 0.5svh 2svh rgba(82, 84, 84, 0.3);
+    >img{
+        height: 8svh;
+    }
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 5svh;
+    > a{
+        text-decoration: none;
+        color: #696969;
+        font-weight: 600;
+    }
+    > a:hover {
+        color: #065c3e;
+    }
+}
+
+@media (max-width: 1000px) {
+    .div{
+        height: 12svh;
+        >img{
+            height: 6svh;
+        }
+    }
+    .links{
+        font-size: 2svh;
+        flex-direction: column;
+        gap: 0.5svh;
+        align-items: flex-start;
+    }
+
+}
