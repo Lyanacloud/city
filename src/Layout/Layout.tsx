@@ -6,7 +6,7 @@ interface ILayout{
     description?: string;
     children?: ReactNode;
     img?: string;
-    anchor: string
+    anchor?: string
 }
 
 export function Layout(props: ILayout ) {

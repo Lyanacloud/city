@@ -1,13 +1,13 @@
 import styles from './Navigation.module.css'
 
 export type link = {
-    href: string,
-    text: string,
+    href?: string,
+    text?: string,
 }
 
 interface NavigationProps {
-    links: link[],
-    icon: string,
+    links?: link[],
+    icon?: string,
 }
 
 export function Navigation ({ links, icon }: NavigationProps) {

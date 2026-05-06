@@ -2,7 +2,7 @@ import styles from "./Modal.module.css"
 import {useState} from "react";
 type ModalProps = {
     type: "monument" | "factory" | "rest"
-    title: string,
+    title?: string,
     src?: string,
     shortDescription?: string
     fullDescription?: string

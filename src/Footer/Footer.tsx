@@ -1,15 +1,13 @@
 import styles from './Footer.module.css'
 
 interface IFooterProps {
-    src?: string | null;
-    title: string;
+    title?: string;
 
 }
 
-export function Footer({src, title}: IFooterProps) {
+export function Footer({title}: IFooterProps) {
     return (
     <div className={styles.div}>
-        {src && <img src={src} alt=''/>}
         <h2 className={styles.h2}>{title}</h2>
     </div>
     );
