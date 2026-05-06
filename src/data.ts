@@ -4,15 +4,14 @@ import type {link} from "./Navigation/Navigation.tsx";
 export type TextInformation = {
     title: string,
     text?: string,
-    src?: string | null
-    img?: string | null
+    img: string,
     anchor?: string | null
 }
 export type ModalInformation = {
     title: string,
     text: string,
     src?: string,
-    fullDescription: string
+    fullDescription?: string
 }
 
 export type NavigationInformation = {
@@ -49,11 +48,13 @@ export const dataText: TextInfo = {
     },
     "Monument": {
         "title": "Достопримечательности",
-        "anchor": "monument"
+        "anchor": "monument",
+        "img" : ""
     },
     "Rest": {
         "title": "Места отдыха",
-        "anchor": "rest"
+        "anchor": "rest",
+        "img" : ""
     }
 }
 
@@ -126,10 +127,11 @@ export const dataSmall: TextInfo = {
     "Header": {
        "title": "Липецк",
        "text": "Город металлургов, целебных источников и богатой истории",
-       "src": "public/original_photo-thumb_1920.jpg"
+       "img": "public/original_photo-thumb_1920.jpg"
    },
     "Footer": {
         "title": "Липецк — город, где история встречается с современностью",
+        "img": ""
     }
 }
 

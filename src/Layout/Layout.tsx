@@ -5,7 +5,7 @@ interface ILayout{
     title?: string;
     description?: string;
     children?: ReactNode;
-    img?: string;
+    img: string | null;
     anchor?: string
 }
 

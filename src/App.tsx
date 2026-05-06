@@ -18,7 +18,7 @@ function App() {
             <Header
                 title={dataSmall.Header.title}
                 text={dataSmall.Header.text}
-                src={dataSmall.Header.src}
+                img={dataSmall.Header.img}
             />
             <Layout
                 title={historyData.History.title}
@@ -93,7 +93,6 @@ function App() {
             </Layout>
             <Footer
                 title={dataSmall.Footer.title}
-                src={dataSmall.Footer.src}
             />
         </>
     )

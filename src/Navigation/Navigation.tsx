@@ -6,7 +6,7 @@ export type link = {
 }
 
 interface NavigationProps {
-    links?: link[],
+    links: link[],
     icon?: string,
 }
 
