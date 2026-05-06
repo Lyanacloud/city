@@ -3,8 +3,8 @@ import {useState} from "react";
 type ModalProps = {
     type: "monument" | "factory" | "rest";
     title: string;
-    src?: string | null;
-    shortDescription?: string | null;
+    src?: string;
+    shortDescription?: string;
     fullDescription?: string;
 }
 export function Modal ({type, title, src, shortDescription,fullDescription}: ModalProps) {

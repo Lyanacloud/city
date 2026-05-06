@@ -24,7 +24,6 @@ function App() {
             <Layout
                 title={historyData.History.title}
                 description={historyData.History.text}
-                src={historyData.History.src}
                 img={historyData.History.img}
                 anchor={historyData.History.anchor}
             />
@@ -53,7 +52,6 @@ function App() {
                 title={historyData.Factory.title}
                 anchor={historyData.Factory.anchor}
                 description={historyData.Factory.text}
-                src={historyData.Factory.src}
                 img={historyData.Factory.img}
             >
                 {Object.keys(modalData).map((key) => {

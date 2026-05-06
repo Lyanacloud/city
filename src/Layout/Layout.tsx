@@ -3,10 +3,10 @@ import styles from "./Layout.module.css"
 
 interface ILayout {
     title?: string;
-    description?: string | null;
+    description?: string;
     children?: ReactNode;
-    img?: string | null;
-    src?: string | null;
+    img?: string;
+    src?: string;
     anchor?: string;
 }
 export function Layout(props: ILayout ) {
