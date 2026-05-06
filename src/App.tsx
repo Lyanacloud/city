@@ -7,8 +7,9 @@ import { Modal } from "./Modal/Modal";
 import { dataText, dataModal, dataNavigation, dataSmall } from './data';
 
 function App() {
-    const historyData = dataText;
-    const modalData = dataModal;
+    const historyData: typeof dataText = dataText;
+    const modalData: typeof dataModal = dataModal;
+
     return (
         <>
             <Navigation
@@ -27,10 +28,12 @@ function App() {
                 img={historyData.History.img}
                 anchor={historyData.History.anchor}
             />
-            <Layout title={historyData.Monument.title}
-            anchor={historyData.Monument.anchor}>
-                {Object.keys(modalData).map((key)=>{
-                    if (key.split('-')[0]==="Monument"){
+            <Layout
+                title={historyData.Monument.title}
+                anchor={historyData.Monument.anchor}
+            >
+                {Object.keys(modalData).map((key) => {
+                    if (key.split('-')[0] === "Monument") {
                         const item = modalData[key as keyof typeof modalData];
                         return (
                             <Modal
@@ -44,8 +47,7 @@ function App() {
                         );
                     }
                     return null;
-                })
-                }
+                })}
             </Layout>
             <Layout
                 title={historyData.Factory.title}
@@ -54,27 +56,29 @@ function App() {
                 src={historyData.Factory.src}
                 img={historyData.Factory.img}
             >
-                {Object.keys(modalData).map((key)=>{
-                    if (key.split('-')[0]==="Factory"){
+                {Object.keys(modalData).map((key) => {
+                    if (key.split('-')[0] === "Factory") {
                         const item = modalData[key as keyof typeof modalData];
                         return (
                             <Modal
                                 type="factory"
                                 key={key}
                                 title={item.title}
+                                src={item.src}
                                 shortDescription={item.text}
                                 fullDescription={item.fullDescription}
                             />
                         );
                     }
                     return null;
-                })
-                }
+                })}
             </Layout>
-            <Layout title={historyData.Rest.title}
-            anchor={historyData.Rest.anchor}>
-                {Object.keys(modalData).map((key)=>{
-                    if (key.split('-')[0]==="Rest"){
+            <Layout
+                title={historyData.Rest.title}
+                anchor={historyData.Rest.anchor}
+            >
+                {Object.keys(modalData).map((key) => {
+                    if (key.split('-')[0] === "Rest") {
                         const item = modalData[key as keyof typeof modalData];
                         return (
                             <Modal
@@ -88,8 +92,7 @@ function App() {
                         );
                     }
                     return null;
-                })
-                }
+                })}
             </Layout>
             <Footer
                 title={dataSmall.Footer.title}

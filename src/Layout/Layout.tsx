@@ -1,14 +1,14 @@
 import type {ReactNode} from "react";
 import styles from "./Layout.module.css"
 
-interface ILayout{
+interface ILayout {
     title?: string;
-    description?: string;
+    description?: string | null;
     children?: ReactNode;
-    img: string | null;
-    anchor?: string
+    img?: string | null;
+    src?: string | null;
+    anchor?: string;
 }
-
 export function Layout(props: ILayout ) {
     return (
     <div className={styles.div}>

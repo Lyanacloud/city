@@ -1,7 +1,7 @@
 import styles from "./Header.module.css"
 interface IHeader {
     title?: string;
-    img: string;
+    img?: string | null;
     text?: string;
 }
 export const Header = (props:  IHeader) => {

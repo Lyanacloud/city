@@ -2,7 +2,6 @@ import styles from './Footer.module.css'
 
 interface IFooterProps {
     title?: string;
-
 }
 
 export function Footer({title}: IFooterProps) {

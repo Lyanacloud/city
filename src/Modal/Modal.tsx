@@ -1,13 +1,12 @@
 import styles from "./Modal.module.css"
 import {useState} from "react";
 type ModalProps = {
-    type: "monument" | "factory" | "rest"
-    title: string,
-    src: string,
-    shortDescription?: string
-    fullDescription?: string
+    type: "monument" | "factory" | "rest";
+    title: string;
+    src?: string | null;
+    shortDescription?: string | null;
+    fullDescription?: string;
 }
-
 export function Modal ({type, title, src, shortDescription,fullDescription}: ModalProps) {
     const [isOpen, setIsOpen] = useState(false);
     const contentClass = type === "factory" ? styles.divFactory : type === "rest" ? styles.divRest : styles.divMonument;
